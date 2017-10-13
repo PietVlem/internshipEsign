@@ -25,8 +25,12 @@
         //mail
         @mail($email_to, $email_subject, $email_message, $headers); 
 
-        //return
-        header('Location: ../index.html');
+        //alert + retrun
+        echo ("<SCRIPT LANGUAGE='JavaScript'>
+        window.alert('Succesfully Updated')
+        window.location.href='../index.html';
+        </SCRIPT>");
+
     }
     else
     {
