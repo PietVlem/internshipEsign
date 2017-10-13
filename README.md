@@ -3,11 +3,10 @@ contact form
 
 ==> www.pietervleminckx.com
 
-used:
+> **Used:**
 
-=> html
+> - html
+> - sass (bourbon-plugin: http://bourbon.io )
+> - ecmascript (framework: https://vuejs.org)
 
-=> sass (bourbon-plugin: http://bourbon.io )
-
-=> js (framework: https://vuejs.org)
 

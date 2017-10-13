@@ -27,7 +27,7 @@
 
         //alert + retrun
         echo ("<SCRIPT LANGUAGE='JavaScript'>
-        window.alert('Succesfully Updated')
+        window.alert('Send Succesfully!')
         window.location.href='../index.html';
         </SCRIPT>");
 
