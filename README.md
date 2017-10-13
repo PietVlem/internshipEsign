@@ -9,5 +9,5 @@ used:
 
 => sass (bourbon-plugin: http://bourbon.io )
 
-=> js (https://vuejs.org)
+=> js (framework: https://vuejs.org)
 
