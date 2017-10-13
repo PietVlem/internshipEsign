@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <!-- css -->
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- font-awesome -->
+  <script src="https://use.fontawesome.com/54f667f310.js"></script>
+  <!-- vue.js -->
+  <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+  <!-- sweetalerts -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+<div class="grid">
+    <div class="row">
+        <div class="col-wd-12">
+            <div class="col">
+                <h1>Contact</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col info_left">
+            <p>Lorem ipsum dolar sit amet<br> consectetur adipiscing elit<br> 
+                <a href="https://goo.gl/maps/WotLYn9oZr72" target="_blank">Zie google maps</a>
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </p>
+        </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col info_right">
+                <p>
+                    <i class="fa fa-phone" aria-hidden="true"></i> +32 9 241 86 59<br>
+                    <i class="fa fa-envelope" aria-hidden="true">
+                        <a href="mailto:info@esign.eu"></i> Info@esign.eu</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="root">
+        <form name="contactform" method="post" action="php/contact.php" @submit="alert('test');">
+            <div class="col-md-6">
+                <div class="col">
+                    <label for="name_input"></label>
+                    <input name="name_input" :class="{ 'error' : errorname }" type="text" placeholder="Full Name" 
+                    id="name_input" required v-model="name" @blur="validateName" @focus="resetErrorName">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col">
+                    <label for="company_input"></label>
+                    <input name="company_input" type="text" placeholder="Company (optional)" id="company_input">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col">
+                    <label for="mail_input"></label>
+                    <input name="mail_input" :class="{ 'error' : errormail }" type="email" placeholder="Email" 
+                    id="mail_input" required v-model="mail" @blur="validateEmail" @focus="resetErrorMail">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col">
+                    <label for="phone_input"></label>
+                    <input name="phone_input" :class="{ 'error' : errorphone }" type="tel" placeholder="Phone" id="phone_input" pattern="[0-9\-]*" 
+                    required v-model="phone" @blur="validatePhone" @focus="resetErrorPhone">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="col">
+                    <label for="message_input"></label>
+                    <textarea name="message_input" id="" cols="30" rows="10" placeholder="How can we help you?" 
+                    id="message_input" required>
+                    </textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col">
+                    <input name="submit" type="submit" value="Send" :disabled="btnDisable">
+                </div>
+            </div>
+        </form>
+    </div>    
+</div>
+
+<!-- scripts -->
+<script src="js/app.js"></script>
+
+</body>
+</html>

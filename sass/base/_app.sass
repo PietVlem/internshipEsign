@@ -1,0 +1,96 @@
+$dark_blue: #2171b5
+$light_blue: #6da2cc
+$grey: #efefef
+
+
+body
+    background: $grey
+
+h1
+    color: $dark_blue
+    font-size: 32pt
+    font-family: $verdana
+
+a
+    text-decoration: none
+    color: $dark_blue
+
+p
+    color: $dark_blue
+    padding: 10px
+    line-height: 18pt
+    font-size: 11pt
+    font-family: $helvetica
+
+.info_left
+    text-align: right
+    @media screen and (max-width:640px)
+        text-align: center
+
+.info_right
+    text-align: left
+    @media screen and (max-width:640px)
+        text-align: center
+
+#{$all-text-inputs}
+    width: 100%
+    padding: 8px
+    border: solid 2px $dark_blue
+    font-size: 11pt
+    color: $dark_blue
+    box-shadow: -4px 4px 0 shade($dark_blue, 20%)
+    +placeholder
+        color: $light_blue
+
+textarea
+    resize: none
+
+#{$all-text-inputs-focus},
+#{$all-text-inputs-hover}
+    outline-color: $light_blue
+
+#{$all-buttons}
+    background-color: $dark_blue
+    padding: 12px
+    font-size: 11pt
+    color: white
+    border: none
+    text-transform: uppercase
+    border: 1px solid shade($dark_blue, 20%)
+    box-shadow: -4px 4px 0 shade($dark_blue, 20%)
+
+input[type="submit"]:disabled
+    background-color: tint($dark_blue, 30%)
+    
+
+input[type="submit"]:disabled:hover
+    cursor: default
+    
+
+#{$all-buttons-focus},
+#{$all-buttons-hover}
+    outline: none
+    border: solid 1px shade($dark_blue, 20%)
+    cursor: pointer
+
+
+#{$all-buttons-active}
+    outline: none
+    position: relative
+    top: 2px
+    left: -2px
+    box-shadow: -2px 2px 0 shade($dark_blue, 30%)
+
+//vuejs
+.error
+    background-color: lighten(red, 35%)
+
+
+
+    
+
+
+
+
+
+
