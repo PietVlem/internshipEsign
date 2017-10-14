@@ -23,7 +23,7 @@ new Vue({
             const reName = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
             const nameTest = reName.test(this.name);
             (!nameTest) ? this.errorname = true: this.errorname = false;
-            (this.errormail || this.errorname) ? this.btnDisable = true : this.btnDisable = false
+            //(this.errormail || this.errorname) ? this.btnDisable = true : this.btnDisable = false
         },
         resetErrorName(){
             this.errorname = false;
@@ -37,7 +37,7 @@ new Vue({
             const reMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             const emailTest = reMail.test(this.mail);
             (!emailTest) ? this.errormail = true: this.errormail = false;
-            (this.errormail || this.errorname) ? this.btnDisable = true : this.btnDisable = false
+            //(this.errormail || this.errorname) ? this.btnDisable = true : this.btnDisable = false
         },
         resetErrorMail(){
             this.errormail = false;
